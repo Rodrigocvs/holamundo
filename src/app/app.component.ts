@@ -16,9 +16,9 @@ export class AppComponent {
   constructor (){
     console.log ('constructor works');
     this.name = "Rodrigo"
-    this.showhobbies=true;
+    this.showhobbies=false;
   }
 toggleHobies(){
-  this.showhobbies= true;  
+  this.showhobbies= !this.showhobbies;  
 }
 }

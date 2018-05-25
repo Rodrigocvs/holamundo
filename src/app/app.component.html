@@ -25,9 +25,11 @@
     </p>
     <a target="_blank" rel="noopener" href="{{webside}}">Ir a Twitter</a>
     
-    <button (click)="toggleHobies" class="btn">Show Hobbies</button>
+    <button (click)="toggleHobies()" class="btn">
+      {{showhobbies ? 'Hide Hobbies' : 'Show Hobbies'}}
+    </button>
     
-    <div  *ngIf="showHobbies" class="component2">
+    <div  *ngIf="showhobbies" class="component2">
       <h3>Hobbies:</h3>
       <ul>
         <li *ngFor="let hobby of Hobbies">{{hobby}}</li>
