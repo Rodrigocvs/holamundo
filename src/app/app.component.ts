@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Rodrigo';
+  name:string;
+  email = "nicolas@hgmail.com";
+  webside = "www.twitter.com";
+  hobbies = ['run', 'read', 'write'];
+  showhobbies: boolean;
+
+  constructor (){
+    console.log ('constructor works');
+    this.name = "Rodrigo"
+    this.showhobbies=true;
+  }
+toggleHobies(){
+  this.showhobbies= true;  
+}
 }
