@@ -34,6 +34,13 @@
       <ul>
         <li *ngFor="let hobby of Hobbies">{{hobby}}</li>
       </ul>
+      <form (submit)="newhobby(hobby)">
+        <input 
+          #hobby
+          type="text" 
+          name="hobby" 
+          placeholder="hobby">
+      </form>
     </div>
   
   </div>

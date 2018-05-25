@@ -10,15 +10,20 @@ export class AppComponent {
   name:string;
   email = "nicolas@hgmail.com";
   webside = "www.twitter.com";
-  hobbies = ['run', 'read', 'write'];
-  showhobbies: boolean;
+  hobbies : string [] ;
+  showhobbies: Boolean;
 
   constructor (){
     console.log ('constructor works');
-    this.name = "Rodrigo"
+    this.name = "Rodrigo";
     this.showhobbies=false;
+    this.hobbies = ['run', 'read', 'write'];
   }
 toggleHobies(){
   this.showhobbies= !this.showhobbies;  
+}
+newhobby (hobby){
+  this.hobbies.push(hobby.value);
+  return false;
 }
 }
