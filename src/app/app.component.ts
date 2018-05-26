@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 
-import {PostService} from './post.servise';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [PostService]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Rodrigo';
@@ -16,14 +13,11 @@ export class AppComponent {
   hobbies : string [] ;
   showhobbies: Boolean;
 
-  constructor (private postservice: PostService){
+  constructor (){
     console.log ('constructor works');
     this.name = "Rodrigo";
     this.showhobbies=false;
     this.hobbies = ['run', 'read', 'write'];
-    this.postservice.getPost().subscribe(posts=> {
-      console.log(posts);
-    });
   }
 toggleHobies(){
   this.showhobbies= !this.showhobbies;  
