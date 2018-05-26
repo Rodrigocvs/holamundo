@@ -24,6 +24,7 @@ toggleHobies(){
 }
 newhobby (hobby){
   this.hobbies.push(hobby.value);
+  hobby.value= '';
   return false;
 }
 }
